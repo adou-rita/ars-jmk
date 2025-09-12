@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détail Profil Socio-économique</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <main class="max-w-6xl mx-auto p-4 sm:p-6">
+    <!-- Header -->
+    <div class="mb-6">
+      <div class="flex space-x-3 justify-center">
+        <!-- Retour -->
+        <a href="socio.html" 
+           class="flex items-center bg-gray-200 text-gray-700 px-3 sm:px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+          </svg>
+          <span class="hidden sm:inline">Retour</span>
+        </a>
+
+        <!-- Enregistrer -->
+        <button type="submit" form="socio-form"
+           class="flex items-center bg-blue-500 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1 sm:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75V4.5A2.25 2.25 0 0015 2.25H6A2.25 2.25 0 003.75 4.5v15A2.25 2.25 0 006 21.75h12a2.25 2.25 0 002.25-2.25V9l-3-2.25z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4.5h6M9 7.5h3"/>
+          </svg>
+          <span class="hidden sm:inline">Enregistrer</span>
+        </button>
+      </div>
+
+      <!-- Titre -->
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-center text-blue-500 mt-6">
+        Détail Profil Socio-Économique
+      </h1>
+    </div>
+
+    <!-- Formulaire principal -->
+    <form id="socio-form" class="space-y-6">
+
+    <!-- Contenu principal -->
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-2xl p-6 sm:p-8 mb-24">
+
+      <!-- Informations Financières -->
+      <h2 class="text-lg sm:text-2xl font-bold text-blue-500 mb-6">Informations Financières</h2>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+         <div>
+           <label class="block text-gray-600 font-medium mb-2">ID Producteur</label>
+           <input type="text" value=""PROD-001" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+         </div>
+       </div>
+
+      <div class="border-t pt-4 mb-8">
+        <h3 class="text-lg font-semibold text-gray-700 mb-3">Financements</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-gray-600 font-medium mb-2">Type de Financement</label>
+            <input type="text" value=""Crédit agricole" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+          </div>
+          <div>
+            <label class="block text-gray-600 font-medium mb-2">Montant (FCFA)</label>
+            <input type="number" value=""500000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+          </div>
+        </div>
+      </div>
+
+      <!-- Switches -->
+      <div class="space-y-4 mb-8">
+        <div class="flex items-center justify-between bg-gray-50 p-4 rounded-lg">
+          <span class="text-sm font-medium text-gray-700">A un Compte</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-blue-500 transition"></div>
+            <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full peer-checked:translate-x-full transition"></div>
+          </label>
+        </div>
+        <div class="flex items-center justify-between bg-gray-50 p-4 rounded-lg">
+          <span class="text-sm font-medium text-gray-700">A de l'Argent sur le Compte</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-blue-500 transition"></div>
+            <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full peer-checked:translate-x-full transition"></div>
+          </label>
+        </div>
+        <div class="flex items-center justify-between bg-gray-50 p-4 rounded-lg">
+          <span class="text-sm font-medium text-gray-700">Bénéficiaire de Financement</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-blue-500 transition"></div>
+            <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full peer-checked:translate-x-full transition"></div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Observations -->
+      <div class="mb-8">
+        <label class="block text-gray-600 font-medium mb-2">Observations</label>
+        <input type="text" value=""Producteur avec une bonne situation financière, accès au crédit facilité" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+      </div>
+
+      <!-- Productions -->
+      <h2 class="text-lg sm:text-2xl font-bold text-blue-500 mb-6">Production de Cacao</h2>
+      <div class="space-y-6 mb-8">
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Production 1</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Année</label>
+              <input type="number" value=""2023" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Quantité (kg)</label>
+              <input type="number" value=""850" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Revenu Brut (FCFA)</label>
+              <input type="number" value=""1275000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Commentaire</label>
+              <input type="text" value=""Bonne récolte cette année, prix stable" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Production 2</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Année</label>
+              <input type="number" value=""2022" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Quantité (kg)</label>
+              <input type="number" value=""720" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Revenu Brut (FCFA)</label>
+              <input type="number" value=""1080000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Commentaire</label>
+              <input type="text" value=""Année difficile à cause des conditions climatiques" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Production 3</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Année</label>
+              <input type="number" value=""2021" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Quantité (kg)</label>
+              <input type="number" value=""650" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Revenu Brut (FCFA)</label>
+              <input type="number" value=""975000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Commentaire</label>
+              <input type="text" value=""Première année de production significative" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Revenus -->
+      <h2 class="text-lg sm:text-2xl font-bold text-blue-500 mb-6">Revenus</h2>
+      <div class="space-y-6 mb-8">
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Revenu 1</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Année</label>
+              <input type="number" value=""2023" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Activité</label>
+              <input type="text" value=""Vente de cacao" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Moyen de Production</label>
+              <input type="text" value=""Plantation familiale" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Revenu Brut (FCFA)</label>
+              <input type="number" value=""1275000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Commentaire</label>
+              <input type="text" value=""Revenu principal de la famille" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Revenu 2</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Année</label>
+              <input type="number" value=""2023" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Activité</label>
+              <input type="text" value=""Vente de bananes" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Moyen de Production</label>
+              <input type="text" value=""Plantation familiale" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Revenu Brut (FCFA)</label>
+              <input type="number" value=""180000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Commentaire</label>
+              <input type="text" value=""Revenu complémentaire" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Revenu 3</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Année</label>
+              <input type="number" value=""2023" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Activité</label>
+              <input type="text" value=""Travail salarié" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Moyen de Production</label>
+              <input type="text" value=""Emploi externe" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Revenu Brut (FCFA)</label>
+              <input type="number" value=""300000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Commentaire</label>
+              <input type="text" value=""Travail saisonnier dans une autre plantation" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dépenses -->
+      <h2 class="text-lg sm:text-2xl font-bold text-blue-500 mb-6">Dépenses</h2>
+      <div class="space-y-6 mb-8">
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Dépense 1</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Type de Dépense</label>
+              <input type="text" value=""Engrais" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Périodicité</label>
+              <input type="text" value=""Annuelle" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Montant Moyen (FCFA)</label>
+              <input type="text" value=""120,000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Observation</label>
+              <input type="text" value=""Achat d'engrais NPK pour améliorer la production" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Dépense 2</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Type de Dépense</label>
+              <input type="text" value=""Main d'œuvre" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Périodicité</label>
+              <input type="text" value=""Mensuelle" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Montant Moyen (FCFA)</label>
+              <input type="text" value=""50,000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Observation</label>
+              <input type="text" value=""Paiement des travailleurs saisonniers" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Dépense 3</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Type de Dépense</label>
+              <input type="text" value=""Transport" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Périodicité</label>
+              <input type="text" value=""Mensuelle" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Montant Moyen (FCFA)</label>
+              <input type="text" value=""25,000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-gray-600 font-medium mb-2">Observation</label>
+              <input type="text" value=""Transport des produits vers le marché" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main d'œuvre -->
+      <h2 class="text-lg sm:text-2xl font-bold text-blue-500 mb-6">Main d'œuvre</h2>
+      <div class="space-y-6">
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Travailleur 1</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Nom du Travailleur</label>
+              <input type="text" value=""Kouassi Jean" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Statut</label>
+              <input type="text" value=""Permanent" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Sexe</label>
+              <input type="text" value=""Homme" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Coût Annuel (FCFA)</label>
+              <input type="text" value=""600,000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Temps de Travail (jours)</label>
+              <input type="text" value=""300" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm md:col-span-2">
+              <span class="text-sm font-medium text-gray-700">Travail en groupe</span>
+              <div class="flex items-center">
+                <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                <span class="text-green-600 font-semibold">Oui</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Travailleur 2</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Nom du Travailleur</label>
+              <input type="text" value=""Traoré Aminata" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Statut</label>
+              <input type="text" value=""Saisonnier" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Sexe</label>
+              <input type="text" value=""Femme" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Coût Annuel (FCFA)</label>
+              <input type="text" value=""200,000" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Temps de Travail (jours)</label>
+              <input type="text" value=""120" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm md:col-span-2">
+              <span class="text-sm font-medium text-gray-700">Travail en groupe</span>
+              <div class="flex items-center">
+                <div class="w-3 h-3 bg-gray-300 rounded-full mr-2"></div>
+                <span class="text-gray-500 font-semibold">Non</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 bg-gray-50 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">Travailleur 3</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Nom du Travailleur</label>
+              <input type="text" value=""Kouadio Paul" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Statut</label>
+              <input type="text" value=""Familial" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Sexe</label>
+              <input type="text" value=""Homme" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Coût Annuel (FCFA)</label>
+              <input type="text" value=""0" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div>
+              <label class="block text-gray-600 font-medium mb-2">Temps de Travail (jours)</label>
+              <input type="text" value=""200" class="w-full border border-gray-300 bg-gray-50 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+            <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm md:col-span-2">
+              <span class="text-sm font-medium text-gray-700">Travail en groupe</span>
+              <div class="flex items-center">
+                <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                <span class="text-green-600 font-semibold">Oui</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </form>
+
+    <!-- Bouton global fixe -->
+    <div class="fixed bottom-0 left-0 w-full bg-white shadow-md p-3 sm:p-4">
+      <div class="max-w-4xl mx-auto">
+        <button type="submit" form="socio-form" class="w-full bg-blue-500 text-white font-semibold py-2 sm:py-3 rounded-lg hover:bg-blue-600 transition">
+          Enregistrer
+        </button>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
