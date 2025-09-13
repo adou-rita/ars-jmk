@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des producteurs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  
+  <div class="w-full max-w-4xl p-6">
+    <h2 class="text-lg font-bold mb-4">Liste des producteurs</h2>
+    
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-gray-100 text-left">
+            <th class="p-3 font-semibold">Nom</th>
+            <th class="p-3 font-semibold">Sexe</th>
+            <th class="p-3 font-semibold">Status</th>
+            <th class="p-3 font-semibold">Action</th>
+          </tr>
+        </thead>
+        <tbody id="table-body" class="divide-y">
+          <!-- Contenu généré dynamiquement -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // Données des producteurs
+    const producteurs = [
+      { nom: "Youl Freddy", sexe: "M", status: "draft" },
+      { nom: "Diallo", sexe: "M", status: "synced" },
+      { nom: "product1", sexe: "M", status: "synced" }
+    ];
+
+    // Sélection du tbody
+    const tbody = document.getElementById("table-body");
+
+    // Génération dynamique
+    producteurs.forEach(prod => {
+      const tr = document.createElement("tr");
+
+      tr.innerHTML = `
+        <td class="p-3">${prod.nom}</td>
+        <td class="p-3">${prod.sexe}</td>
+        <td class="p-3">${prod.status}</td>
+        <td class="p-3">
+          <button 
+            class="${
+              prod.status === "draft" 
+              ? "bg-amber-700 hover:bg-amber-800 text-white px-3 py-1 rounded" 
+              : "bg-gray-400 text-white px-3 py-1 rounded cursor-not-allowed"
+            }">
+            Modifier
+          </button>
+        </td>
+      `;
+
+      tbody.appendChild(tr);
+    });
+  </script>
+
+</body>
+</html>
